@@ -102,6 +102,7 @@ h1, h2, h3, .logo {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 5rem 5%;
+    background: var(--light-bg);
 }
 
 .category-card {
@@ -115,6 +116,13 @@ h1, h2, h3, .logo {
     text-align: center;
     background-position: center;
     background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
 }
 
 .category-card::before {
@@ -124,7 +132,30 @@ h1, h2, h3, .logo {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(44, 54, 57, 0.5);
+    background: linear-gradient(to bottom, rgba(44, 54, 57, 0.3), rgba(44, 54, 57, 0.7));
+}
+
+.category-card h2 {
+    position: relative;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.category-link {
+    position: relative;
+    color: var(--light-bg);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--light-bg);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.category-link:hover {
+    background: var(--light-bg);
+    color: var(--primary-color);
 }
 
 .men {
@@ -137,19 +168,6 @@ h1, h2, h3, .logo {
 
 .children {
     background-image: url('https://images.pexels.com/photos/5559986/pexels-photo-5559986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-}
-
-/* Featured Section */
-.featured {
-    padding: 5rem 5%;
-    background: var(--light-bg);
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
 }
 
 .product-card {
